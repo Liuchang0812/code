@@ -6,3 +6,7 @@
 *.exe
 *.app
 
+# temporary files
+*.tmp
+*.in
+*.out

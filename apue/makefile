@@ -1,10 +1,8 @@
 CC = gcc
 CFLAGS = -Wall -g -c
 
-helloworld.out : helloworld.o
-	$(CC) helloworld.o -o helloworld.out
+createfile.out : createfile.o
+	$(CC) createfile.o -o createfile.out
 
-helloworld.o : helloworld.c
-	$(CC) $(CFLAGS) helloworld.c -o helloworld.o
-
-
+createfile.o : createfile.c 
+	$(CC) $(CFLAGS) createfile.c -o createfile.o
