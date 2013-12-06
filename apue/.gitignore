@@ -1,0 +1,8 @@
+# .o files
+*.o
+
+# executable
+*.out
+*.exe
+*.app
+
