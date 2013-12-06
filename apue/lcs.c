@@ -9,25 +9,24 @@ int main(){
 		char *stra, *strb ; 
 
 		stra = (char*)malloc(100 * sizeof(char)) ;
-		strb = (char*)malloc(100 * sizeof(char)) ;					scanf("%s %s", stra, strb) ; 
+		strb = (char*)malloc(100 * sizeof(char)) ;					
+		scanf("%s %s", stra, strb) ; 
 		int lena, lenb ; 
 		lena = strlen(stra) ; 
 		lenb = strlen(strb) ;
-
-
-										printf("%s \t %d\n%s \t %d \n", stra, lena, strb, lenb) ;
-											memset(f, 0 ,sizeof f) ; 
-												for(int i = 1;i <= lena; i++)
-															for(int j = 1;j <= lenb;j ++)
-																		{
-																						if( stra[i-1] == strb[j-1] ) {
-																											f[i][j] = f[i-1][j-1] + 1;
-																														}
-																									else{
-																														f[i][j] = max(f[i-1][j] , f[i][j-1]) ;
-																																	}
-																												//printf("%d %d %d\n", i, j, f[i][j]) ; 
-																											}
-													printf("%d\n", f[lena][lenb] ) ; 
-														return 0 ;  
+		printf("%s \t %d\n%s \t %d \n", stra, lena, strb, lenb) ;
+		memset(f, 0 ,sizeof f) ; 
+		for(int i = 1;i <= lena; i++)
+			for(int j = 1;j <= lenb;j ++)
+			{
+				if( stra[i-1] == strb[j-1] ) {
+					f[i][j] = f[i-1][j-1] + 1;
+				}
+				else{
+					f[i][j] = max(f[i-1][j] , f[i][j-1]) ;
+				}
+				//printf("%d %d %d\n", i, j, f[i][j]) ; 
+			}
+		printf("%d\n", f[lena][lenb] ) ; 
+		return 0 ;  
 }
