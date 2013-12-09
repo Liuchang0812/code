@@ -5,6 +5,6 @@
 
 int main(int argc, char* argv[])
 {
-	printf("%d\n", strerror(3)) ;
+	printf("%s\n", strerror(3)) ;
 	return 0;
 }
