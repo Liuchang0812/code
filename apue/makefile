@@ -1,8 +1,18 @@
 CC = gcc
 CFLAGS = -Wall -g -c
+SOURCES := $(wildcard *.c)
+OBJS := $(patsubst %.c,%.o,$(SOURCES))
+EXES := $(patsubst %.o,%.out,$(OBJS))
 
-createfile.out : createfile.o
-	$(CC) createfile.o -o createfile.out
+.PHONY:all
 
-createfile.o : createfile.c 
-	$(CC) $(CFLAGS) createfile.c -o createfile.o
+all:$(EXES)
+
+%.out : %.o
+	$(CC) $< -o $@
+%.o: %.c
+	$(CC) $< $(CFLAGS) -o $@
+
+.PHONY:clean
+clear :
+	-rm *.o *.out

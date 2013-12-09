@@ -16,8 +16,9 @@ int main(){
 		lenb = strlen(strb) ;
 		printf("%s \t %d\n%s \t %d \n", stra, lena, strb, lenb) ;
 		memset(f, 0 ,sizeof f) ; 
-		for(int i = 1;i <= lena; i++)
-			for(int j = 1;j <= lenb;j ++)
+		int i,j;
+		for(i = 1;i <= lena; i++)
+			for(j = 1;j <= lenb;j ++)
 			{
 				if( stra[i-1] == strb[j-1] ) {
 					f[i][j] = f[i-1][j-1] + 1;
