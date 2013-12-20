@@ -1,5 +1,7 @@
-CC = g++
-CFLAGS = -Wall -g -c -std=c++0x
+CC = gcc
+CPP = g++
+CFLAGS = -Wall -g -c -std=c99
+CPPFLAGS = -Wall -g -c
 LIB = -pthread
 cSOURCES := $(wildcard *.c)
 cOBJS := $(patsubst %.c,%.o,$(cSOURCES))
@@ -20,7 +22,7 @@ all:$(cEXES) $(cppEXES)
 	$(CC)  $(CFLAGS) $< -o $@
 
 %.o: %.cpp
-	$(CC) $(CFLAGS) $< -o $@
+	$(CPP) $(CPPFLAGS) $< -o $@
 
 .PHONY:clean
 clean :
