@@ -1,4 +1,6 @@
 #include<iostream>
+#include<inttypes>
+using namespace std;
 
 int main(){
     uint64_t totalSize = 0;
