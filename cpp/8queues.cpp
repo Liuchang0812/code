@@ -26,6 +26,10 @@ void try_nth(int lineno)
     if ( lineno == QUEUE_NUM )
     {
         sum ++;
+        printf("The %lldth solution:\n[", sum) ;
+        for(int i = 0;i < QUEUE_NUM;i ++)
+            printf("%d ", map[i]) ;
+        printf("]\n");
         return;
     }
     for(int i = 0;i < QUEUE_NUM;i ++)
