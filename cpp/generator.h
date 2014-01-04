@@ -6,8 +6,8 @@ namespace btm{
 namespace generator{
     class BasicGenerator{
         public:
-            virtual char* NextString() ;
-            virtual char* LastString() ;
+            virtual const char* NextString() ;
+            virtual const char* LastString() ;
         private:
             char* laststring;
     };

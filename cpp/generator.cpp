@@ -1,10 +1,10 @@
 #include "generator.h"
 using namespace btm::generator;
-char* NextString()
+const char* NextString()
 {
     return "NextString";
 }
-char* LastString()
+const char* LastString()
 {
     return "LastString";
 }
