@@ -1,18 +1,11 @@
 #include<string.h>
 #include<stdio.h>
 #include<time.h>
+#include <fstream>
+using namespace std;
 
-void
-log(const char* msg)
+int main()
 {
-    time_t ticks;
-    ticks = time(NULL);
-    printf("%s:\t%s\n", ctime(&ticks), msg) ; 
-}
-
-int
-main()
-{
-    log("hello world");
-    return 0;
+    ofstream cout("test.out");
+    cout << "lc"<< endl;
 }
