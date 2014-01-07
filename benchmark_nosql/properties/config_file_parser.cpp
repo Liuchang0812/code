@@ -9,7 +9,7 @@ class ConfigFileParser{
     public:
         ConfigFileParser(string filename);
         ~ConfigFileParser();
-        int parserFile(map<string, string> &result);
+        int parseFile(map<string, string> &result);
     private:
         string filename_;
 };
@@ -20,7 +20,7 @@ ConfigFileParser::ConfigFileParser(std::string filename):filename_(filename)
 ConfigFileParser::~ConfigFileParser()
 {
 }
-int ConfigFileParser::parserFile(map<string, string> &result)
+int ConfigFileParser::parseFile(map<string, string> &result)
 {
     if (filename_ == "")
     {
