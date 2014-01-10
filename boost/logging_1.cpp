@@ -6,7 +6,7 @@ namespace logging = boost::log;
 
 void init()
 {
-    logging::add_file_log("sample.log");
+    boost::log::add_file_log("sample.log");
     logging::core::get()->set_filter(
             logging::trivial::severity >= logging::trivial::info
             );
