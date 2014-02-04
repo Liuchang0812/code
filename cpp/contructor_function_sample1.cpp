@@ -22,7 +22,7 @@ public:
 
 int main(int argc, char* argv[])
 {
-	Base b;
+	//Base b;
 	Concrete c;
 	return 0;
 }
