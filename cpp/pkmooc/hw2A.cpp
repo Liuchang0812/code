@@ -6,6 +6,7 @@ class student
 public:
 student(string s);
 int avg();
+void pntInfo();
 private:
 string name, studentId;
 int age,avgpoint[5];
@@ -24,7 +25,10 @@ int student::avg()
 {
 		return avgpoint[0];
 }
-
+void student::pntInfo()
+{
+	cout << name <<"," << age <<"," << studentId <<",";
+}
 student::student(string s)
 {
 int currentpos = 0;
@@ -64,6 +68,7 @@ int main(int argc, char** argv)
 		string s;
 		cin >> s;
 		student st(s);
+		st.pntInfo();
 		cout << st.avg() << endl;
 		return 0;
 }
