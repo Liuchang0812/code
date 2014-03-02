@@ -46,8 +46,9 @@ currentpos = nextpos + 1;
 
 //studentid
 nextpos = s.find(",", currentpos);
-studentId = ToInt(s.substr(currentpos, nextpos - currentpos ));
+studentId = s.substr(currentpos, nextpos - currentpos );
 currentpos = nextpos + 1;
+
 //age1 ... age4
 int tmpsum = 0;
 for (size_t i = 1;i <= 4;i ++)
